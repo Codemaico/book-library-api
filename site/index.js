@@ -3,7 +3,7 @@ function getBooks() {
 
     // fetching the data from the api according to our input
 
-    fetch("http://openlibrary.org/search.json?q="+document.getElementById('input').value)
+    fetch("https://openlibrary.org/search.json?q="+document.getElementById('input').value)
 
     .then(a=>a.json())
     .then(response => {
