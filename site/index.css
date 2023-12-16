@@ -56,10 +56,10 @@
     align-items: center;
     align-content: baseline;
     flex-wrap: wrap;
-    margin: auto;
-    background-repeat: no-repeat;
+    
+    
     background-color:rgb(219, 217, 217) ;
-    overflow-x: hidden;
+    overflow: hidden;
 
 }
 
@@ -73,6 +73,7 @@
     color: #088178;
     background-color: #fddde4;
     font-weight: 700;
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.06);
 
 }
 
