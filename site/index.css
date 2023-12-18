@@ -76,6 +76,7 @@ body {
     background-color: rgb(219, 217, 217);
     overflow-x: hidden;
     margin-top: 35vh;
+    position: relative;
 }
 
 #output .item {
