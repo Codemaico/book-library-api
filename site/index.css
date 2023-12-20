@@ -19,7 +19,7 @@ body {
 
 .form-container {
     width: 100%;
-    height: 35vh;
+    height: 35%;
     position: fixed;
     z-index: 1;
     background-image: url(images/pexels-olena-bohovyk-3646105.jpg);
@@ -102,3 +102,46 @@ body {
     height: 180px;
     margin: 20px 10px 10px 10px;
 }
+
+
+/* Existing styles */
+
+/* Responsive styles */
+@media (max-width: 576px) {
+    .form input {
+        padding: 0 1rem; /* Adjust padding for smaller screens */
+    }
+
+    .form button {
+        padding: 0.5rem 1rem; /* Adjust padding for smaller screens */
+    }
+
+    #output {
+        margin-top: 25vh; /* Adjust margin for smaller screens */
+    }
+    
+    #output .item {
+        width: 100%; /* Make each item take full width on smaller screens */
+    }
+
+    #output img {
+        width: 100%; /* Make images responsive within their containers */
+        height: auto;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 992px) {
+    .form input {
+        padding: 0 2rem; /* Adjust padding for medium-sized screens */
+    }
+
+    .form button {
+        padding: 0.5rem 1.5rem; /* Adjust padding for medium-sized screens */
+    }
+
+    #output {
+        margin-top: 30vh; /* Adjust margin for medium-sized screens */
+    }
+}
+
+/* Add more media queries as needed for larger screen sizes */
