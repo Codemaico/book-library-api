@@ -19,9 +19,9 @@ body {
 
 .form-container {
     width: 100%;
-    height: 35%;
+    height: 30vh;
     position: fixed;
-    z-index: 1;
+    z-index: 999;
     background-image: url(images/pexels-olena-bohovyk-3646105.jpg);
     background-size: cover;
     transition: top 0.3s ease; /* Smooth transition for top changes */
@@ -63,20 +63,30 @@ body {
     color: rgb(88, 84, 84);
 }
 
+
+#output-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #output {
     box-sizing: border-box;
     width: 100%;
     max-width: 100vw;
-    height: 100%;
+   
+    height: 500px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     background-color: rgb(219, 217, 217);
-    overflow-x: hidden;
-    margin-top: 35vh;
+    overflow-x: auto;
+    margin-top: 30vh;
+   
     position: relative;
+    padding: 20px;
 }
 
 #output .item {
@@ -84,64 +94,52 @@ body {
     flex-direction: column;
     align-items: center;
    margin: 10px;
+   margin-bottom: 100px;
+   padding: 0.0000000000000000000009px;
 }
 
 #output h2 {
-    font-size: 12px;
+    font-size: 10px;
     margin: 10px;
     padding: 9px 8px 6px 8px;
     border-radius: 4px;
-    color: rgb(87, 85, 85);;
+    color: rgb(87, 85, 85);
     background-color: #f7f4f4;
     font-weight: 800;
     box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
 }
 
 #output img {
-    width: 180px;
-    height: 180px;
+    width: 100px;
+    height: 100px;
     margin: 20px 10px 10px 10px;
 }
 
+.pagination-button {
+    background-color: rgb(8, 168, 168);
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+   
+}
+
+.pagination-button:hover {
+    background-color: rgb(218, 214, 12);
+    color: rgb(88, 84, 84);
+}
 
 /* Existing styles */
 
 /* Responsive styles */
-@media (max-width: 576px) {
-    .form input {
-        padding: 0 1rem; /* Adjust padding for smaller screens */
-    }
-
-    .form button {
-        padding: 0.5rem 1rem; /* Adjust padding for smaller screens */
-    }
-
-    #output {
-        margin-top: 25vh; /* Adjust margin for smaller screens */
-    }
-    
-    #output .item {
-        width: 100%; /* Make each item take full width on smaller screens */
-    }
-
-    #output img {
-        width: 100%; /* Make images responsive within their containers */
-        height: auto;
-    }
-}
-
-@media (min-width: 577px) and (max-width: 992px) {
-    .form input {
-        padding: 0 2rem; /* Adjust padding for medium-sized screens */
-    }
-
-    .form button {
-        padding: 0.5rem 1.5rem; /* Adjust padding for medium-sized screens */
-    }
-
-    #output {
-        margin-top: 30vh; /* Adjust margin for medium-sized screens */
-    }
-}
 
 /* Add more media queries as needed for larger screen sizes */
