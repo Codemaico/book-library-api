@@ -9,7 +9,20 @@ const resultsPerPage = 10;
 
 let apiUrl;
 
-let results;
+let allResults = [];
+
+// function to get books when enter key is pressed
+function handleEnterKey(event) {
+    if (event.key === 'Enter') {
+        getBooks();
+    }
+}
+
+//add event listener to the input element
+const inputElement = document.getElementById('input');
+inputElement.addEventListener('keydown', handleEnterKey);
+
+
 function getBooks() {
     // Get the user input and author name
     const userInput = document.getElementById('input').value;
@@ -21,29 +34,34 @@ function getBooks() {
         apiUrl +=  "+author:" + authorName;
     }
 
-    // Calculate the start index for pagination
-    const startIndex = (currentPage - 1) * resultsPerPage;
-
+    
     // Fetch data from the Open Library API based on the modified query
     fetch(apiUrl)
         .then(response => response.json())
         .then(data => {
-            // Get a subset of results based on pagination
-            results = data.docs.slice(startIndex, startIndex + resultsPerPage);
+            // Add the fetched results to the array
+            allResults = allResults.concat(data.docs);
 
             // Display the results
-            displayResults(data, results);
+            displayResults();
            
             // Add pagination if there are more results
-            if (results.length < data.numFound) {
+            if (currentPage * resultsPerPage < allResults.length) {
                 addPaginationButton();
             }
         });
 }
 
-function displayResults(data, results) {
+function displayResults() {
 
-    console.log("Results:", data.numFound);
+    console.log("Results:", allResults.length);
+
+    // calculate the start of index for pagination
+    const startIndex = (currentPage - 1) * resultsPerPage;
+
+    //get a subset results based on pagination
+    const results = allResults.slice(startIndex, startIndex + resultsPerPage);
+
     // Get the output element
     const outputElement = document.getElementById('output');
 
@@ -101,13 +119,15 @@ function addPaginationButton() {
     // Attach a click event to load more results
     paginationButton.addEventListener('click', () => {
         currentPage++;
-        getBooks();
+        displayResults();
        
     });
 
     // Append the button to the output div
     outputContainer.appendChild(paginationButton);
 }
+
+getBooks();
 
 
 
