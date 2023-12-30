@@ -1,144 +1,138 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    display: block;
-    margin: 0;
-    font-family: 'Arial', sans-serif;
+  display: block;
+  margin: 0;
+  font-family: "Arial", sans-serif;
 }
 
 .main-container {
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
 }
 
 .form-container {
-    width: 100%;
-    height: 30vh;
-    position: fixed;
-    z-index: 999;
-    background-image: url(images/pexels-olena-bohovyk-3646105.jpg);
-    background-size: cover;
-    transition: top 0.3s ease; /* Smooth transition for top changes */
+  width: 100%;
+  height: 30vh;
+  position: fixed;
+  z-index: 999;
+  background-image: url(images/pexels-olena-bohovyk-3646105.jpg);
+  background-size: cover;
+  transition: top 0.3s ease; /* Smooth transition for top changes */
 }
 
 .form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .form input {
-    height: 3rem;
-    padding: 0 3.15rem;
-    border-radius: 8px;
-    margin: 10px;
-   
+  height: 3rem;
+  padding: 0 3.15rem;
+  border-radius: 8px;
+  margin: 10px;
 }
 
 .form button {
-    margin: 5px;
+  margin: 5px;
 }
 
 .form .normal {
-    height: 3rem;
-    padding: 0 2.15rem;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 14px;
-    color: beige;
-    background-color: rgb(8, 168, 168);
+  height: 3rem;
+  padding: 0 2.15rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  color: beige;
+  background-color: rgb(8, 168, 168);
 }
 
 .form .normal:hover {
-    cursor: pointer;
-    background-color: rgb(240, 236, 23);
-    color: rgb(88, 84, 84);
+  cursor: pointer;
+  background-color: rgb(240, 236, 23);
+  color: rgb(88, 84, 84);
 }
 
-
 #output-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #output {
-    box-sizing: border-box;
-    width: 100%;
-    max-width: 100vw;
-   
-    height: 500px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(219, 217, 217);
-    overflow-x: auto;
-    margin-top: 30vh;
-   
-    position: relative;
-    padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100vw;
+
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(219, 217, 217);
+  overflow-x: auto;
+  margin-top: 30vh;
+
+  position: relative;
+  padding: 20px;
 }
 
 #output .item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-   margin: 10px;
-   margin-bottom: 100px;
-   
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  margin-bottom: 100px;
 }
 
 #output h2 {
-    font-size: 10px;
-    margin: 10px;
-    padding: 9px 8px 6px 8px;
-    border-radius: 4px;
-    color: rgb(87, 85, 85);
-    background-color: #f7f4f4;
-    font-weight: 800;
-    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+  font-size: 10px;
+  margin: 10px;
+  padding: 9px 8px 6px 8px;
+  border-radius: 4px;
+  color: rgb(87, 85, 85);
+  background-color: #f7f4f4;
+  font-weight: 800;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
 }
 
 #output img {
-    width: 100px;
-    height: 100px;
-    margin: 20px 10px 10px 10px;
+  width: 100px;
+  height: 100px;
+  margin: 20px 10px 10px 10px;
 }
 
 .pagination-button {
-    background-color: rgb(8, 168, 168);
-    color: #ffffff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-    margin-top: 10px;
-    display: block;
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-   
+  background-color: rgb(8, 168, 168);
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+  display: block;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .pagination-button:hover {
-    background-color: rgb(218, 214, 12);
-    color: rgb(88, 84, 84);
+  background-color: rgb(218, 214, 12);
+  color: rgb(88, 84, 84);
 }
-
-/* Existing styles */
 
 /* Responsive styles */
 
