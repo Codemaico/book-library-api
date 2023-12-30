@@ -38,7 +38,7 @@ function getBooks() {
     .then((response) => response.json())
     .then((data) => {
       // Add the fetched results to the array
-      allResults = allResults.concat(data.docs);
+      allResults = data.docs;
 
       // Display the results
       displayResults();
